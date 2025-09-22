@@ -10,7 +10,7 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
 
 ## Features
 
-- [ ] **Window & Layout**
+- [✓] **Window & Layout**
   - [✓] Create main window
   - [✓] Add menu bar / control panel
   - [✓] Define layout using JavaFX panes 
@@ -27,7 +27,7 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
   - [✓] Update adjacent mine counts
   - [ ] Add power-up cell logic
 
-- [ ] **Game Mechanics**
+- [✓] **Game Mechanics**
   - [✓] Randomly place mines
   - [✓] Calculate numbers around mines
   - [✓] Implement recursive reveal for empty cells
