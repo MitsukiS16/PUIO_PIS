@@ -17,7 +17,7 @@ The interactive version will be implemented using JavaFX.
 
 ## Features
 
-- [ ] **Window & Layout**
+- [✓] **Window & Layout**
   - [✓] Create main window
   - [✓] Add menu bar / control panel
   - [✓] Define layout using JavaFX panes 
@@ -39,6 +39,12 @@ The interactive version will be implemented using JavaFX.
   - [ ] Guarantee at least 3 starting rules
   
 - [ ] **Game Mechanics**
+  - [✓] Randomly place mines
+  - [ ] Generate logical clues dynamically instead of numbers
+  - [ ] Detect Game Over
+  - [ ] Detect Winning condition
+
+- [✓] **Game Mechanics**
   - [✓] Randomly place mines
   - [ ] Generate logical clues dynamically instead of numbers
   - [ ] Detect Game Over
