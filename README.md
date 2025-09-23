@@ -2,11 +2,18 @@
 
 **Name**: Clarisse CARVALHO
 
-**Subject**: PSI
+**Subject**: PIS
 
 
 ## Project Overview
-Minesweeper is a classic logic-based game where players reveal cells on a grid while avoiding hidden mines. The goal is to uncover all safe cells and correctly flag all mines. This project implements an interactive version using JavaFX, with additional features like power-ups, custom settings, and gameplay aids.
+
+Logic Minesweeper is a new twist on the classic Minesweeper game. Instead of showing number for adjacent mines, the board provides logical clues. Players must deduce bomb positions using reasoning rather than counting. 
+
+The game starts with at least three initial rules (depending on the level), ensuring that the puzzle is solvable from the beginning. Each revealed cell provides a clue, which gradually eliminates possibilities until all bombs are found.
+
+Types of clues: row/column totals, directional hints, or conditional logic
+
+The interactive version will be implemented using JavaFX.
 
 ## Features
 
@@ -21,28 +28,32 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
   - [ ] Input fields / options for custom settings
 
 - [ ] **Grid System**
-  - [ ] Implement cell class (state: covered, revealed, flagged, mined)
-  - [✓] Handle left-click (reveal cell)
+  - [ ] Implement cell class (state: covered, revealed, flagged, mined, clue)
+  - [ ] Handle left-click (reveal cell -> show clue)
   - [ ] Handle right-click (flag cell)
-  - [✓] Update adjacent mine counts
-  - [ ] Add power-up cell logic
-
+  - [ ] Add different clue types instead of numbers:
+	- [ ] Row/Column bomb counts
+	- [ ] Directional arrows (→, ↑, etc.)
+  	- [ ] Conditional logic (e.g., “Exactly 1 of these cells has a bomb”)
+  	- [ ] Global clues (e.g., “There are 5 bombs in total”)
+  - [ ] Guarantee at least 3 starting rules
+  
 - [ ] **Game Mechanics**
   - [✓] Randomly place mines
-  - [✓] Calculate numbers around mines
-  - [✓] Implement recursive reveal for empty cells
-  - [✓] Detect Game Over
-  - [✓] Detect Winning condition
+  - [ ] Generate logical clues dynamically instead of numbers
+  - [ ] Detect Game Over
+  - [ ] Detect Winning condition
 
 - [ ] **Custom Settings**
   - [ ] Adjustable grid size (9x9, 16x16, 16x32)
   - [ ] Adjustable mine density (Easy, Medium, Hard)
-  - [ ] Limited flags mode
-  - [ ] Limited time mode
+  - [ ] Limited flags mode (ON/OFF)
+  - [ ] Limited time mode (ON/OFF)
+  - [ ] Show Bomb Count (ON/OFF)
 
 - [ ] **Additional Features**
-  - [ ] Help button (reveal one bomb)
-  - [ ] Power-up cells that reveal adjacent safe cells
+  - [ ] Hint button (reveal one clue)
+  - [ ] Check button (validate flagged bombs)
   - [✓] Game Over and Winning messages
 
 ## Installation
@@ -68,7 +79,6 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
 4. Click `Browse` and locate the folder where you extracted the ZIP.
 5. Ensure the project apppears in the `Projects`, then click `Finish`
 
-
 **Configuring JavaFX**
 - Add the JavaFX `lib` folder to your project’s build path  
   (`Project > Properties > Java Build Path > Add External JARs`).
@@ -82,8 +92,9 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
 - The main window of the Minesweeper game will launch automatically.
 
 ## Usage
-- Left-click on a cell to reveal it
+- Left-click on a cell to reveal its clue
 - Right-click to flag a suspected mine
+- Use logic (from the clues) to deduce bomb positions
 - Use control buttons to start a new game, reset, or access custom settings
 
 ## Architecture & Implementation
@@ -94,13 +105,13 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
   - `Grid.java` – Manages the grid and generates the board
   - `Cell.java` – Represents individual cells (covered, revealed, flagged, mined)
   - `GameController.java` – Controls game flow, events, and user interactions
-  - (Optional) `.fxml` files – Define UI layout (if using FXML + Scene Builder)
+  - `.fxml` files – Define UI layout 
 
 ## Screenshots
 ![Screenshot](screenshot1.png)
 
-## Known Limitations
-- Limited grid sizes
+## Future Work
+- Limited clue variety in early versions
 - Only single-player mode
 - No save/load game functionality
-- Simple power-up types
+The game always starts with three initial rules, ensuring that the puzzle is solvable from the beginning
