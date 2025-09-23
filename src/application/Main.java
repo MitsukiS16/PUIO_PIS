@@ -14,7 +14,10 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
         
-        // CREATE SCENE
+        
+        // CREATE VIEW?
+        
+        // CREATE AND SHOW SCENE 
         Scene scene = new Scene(root);
         
         // SET SIZE SCREEN

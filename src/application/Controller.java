@@ -8,15 +8,25 @@ import javafx.scene.control.Alert.AlertType;
 
 public class Controller {
 	
+	// add model stuff and import on top for the mvc.models
+	
+	
 	// INIT VARIABLES
 	
     @FXML private GridPane gridPane;
 
-    private int rows = 9;
-    private int cols = 9;
-    private int totalMines = 10;
+    private int rows = 6;
+    private int cols = 10;
+    private int totalMines = 8;
     private int revealedCells = 0;
     private Cell[][] cells;
+    
+    // setView (Main View view) 
+    // account = new FInanalcial account ()
+    // view.getAccount Holder details 
+    // check always when get input from user, what type of input we want, and dont let any other type of input
+    
+    
     
     // INIT FUNCTIONS 
     
@@ -36,19 +46,33 @@ public class Controller {
     private void newGame() {
     	gridPane.getChildren().clear();
         revealedCells = 0;
+        
+        
+        // NEW CODE
+        gridPane.setHgap(0); 
+        gridPane.setVgap(35); 
+        //in gridPane.setTranslateY(-10); 
+        
         cells = new Cell[rows][cols];
 
         // CREATE A NEW GRID OF CELLS
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 Cell cell = new Cell(i, j);
-                cell.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-                GridPane.setHgrow(cell, Priority.ALWAYS);
-                GridPane.setVgrow(cell, Priority.ALWAYS);
 
+                // NEW CODE 
+                cell.setRotate(45);
+                if (j % 2 == 0) {
+                    cell.setTranslateY(0);
+                } else {
+                    cell.setTranslateY(40); 
+                }
+
+                cell.setTranslateY(cell.getTranslateY() - 20);
                 // HANDLER FOR INTERACTION WITH CELL
                 cell.setOnMouseClicked(event -> revealCell(cell));
                 gridPane.add(cell, j, i);
+                //gridPane.add(cellsetPrefSize, j, i);
                 cells[i][j] = cell;
             }
         }
@@ -108,7 +132,9 @@ public class Controller {
             cell.setStyle("-fx-background-color: white;");
             int count = cell.getAdjacentMines();
             if (count > 0) {
+            
                 cell.setText(String.valueOf(count));
+                cell.rotateTextHorizontal();
             } else {
             	// CREATE EMPTY CELLS
                 for (int i = cell.getRow() - 1; i <= cell.getRow() + 1; i++) {

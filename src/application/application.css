@@ -48,9 +48,9 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
 }
 
-.grid-button:hover {
+/*/.grid-button:hover {
     -fx-background-color: #7f91a5; 
-    -fx-cursor: hand;
+    -fx-cursor: hand; */
 }
 
 .grid-button:pressed {

@@ -20,10 +20,27 @@ public class Cell extends Button {
         this.isRevealed = false;
         this.adjacentMines = 0;
         
-        setPrefSize(30, 30);
-        setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
-        setStyle("-fx-background-color: #A0A0A0; -fx-border-color: #808080; -fx-border-width: 2px;");
+        setMinSize(50, 50);
+        setMaxSize(50, 50);
+        //setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+        //setStyle("-fx-background-color: #A0A0A0; -fx-border-color: #808080; -fx-border-width: 2px;");
+        setStyle("-fx-background-color: #A0A0A0; -fx-border-color: #808080; -fx-border-width: 2px; -fx-alignment: center;");
+
     }
+    
+    
+    public void rotateTextHorizontal() {
+        this.applyCss();
+        var textNode = this.lookup(".text");
+        if (textNode != null) {
+            textNode.setRotate(-45);
+        }
+    }
+
+
+    
+    
+    // integer property and other types of property -> check it out
 
     // GETTER AND SETTERS
     

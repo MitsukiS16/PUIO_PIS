@@ -89,8 +89,7 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
   - (Optional) `.fxml` files – Define UI layout (if using FXML + Scene Builder)
 
 ## Screenshots
-![Screenshot](image.png)
-![Screenshot](image.png)
+![Screenshot](screenshot1.png)
 
 ## Known Limitations
 - Limited grid sizes

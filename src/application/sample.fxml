@@ -36,13 +36,13 @@
         </HBox>
     </top>
 
-    <center>
-		<GridPane fx:id="gridPane" hgap="3" vgap="3"
-		          style="-fx-padding: 10; -fx-background-color: #bdc3c7; -fx-border-radius: 15; -fx-background-radius: 15;"
-		          alignment="CENTER"
-		          GridPane.hgrow="ALWAYS"
-		          GridPane.vgrow="ALWAYS"/>
-    </center>
+	<center>
+	    <GridPane fx:id="gridPane" hgap="2" vgap="1"
+	              style="-fx-background-color: #bdc3c7; -fx-border-radius: 15; -fx-background-radius: 15;"
+	              alignment="CENTER"
+	              GridPane.hgrow="ALWAYS"
+	              GridPane.vgrow="ALWAYS"/>
+	</center>
 
     <bottom>
         <HBox spacing="10" style="-fx-padding: 15; -fx-background-color: #e6eef5;" alignment="CENTER">
