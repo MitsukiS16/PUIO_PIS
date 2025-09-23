@@ -32,8 +32,8 @@ The interactive version will be implemented using JavaFX.
   - [ ] Handle left-click (reveal cell -> show clue)
   - [ ] Handle right-click (flag cell)
   - [ ] Add different clue types instead of numbers:
-	- [ ] Row/Column bomb counts
-	- [ ] Directional arrows (→, ↑, etc.)
+	  - [ ] Row/Column bomb counts
+	  - [ ] Directional arrows (→, ↑, etc.)
   	- [ ] Conditional logic (e.g., “Exactly 1 of these cells has a bomb”)
   	- [ ] Global clues (e.g., “There are 5 bombs in total”)
   - [ ] Guarantee at least 3 starting rules
