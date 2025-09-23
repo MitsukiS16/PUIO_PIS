@@ -53,13 +53,21 @@ Minesweeper is a classic logic-based game where players reveal cells on a grid w
 - Eclipse IDE
 - (Optional) Scene Builder
 
-**Project Setup**
+**Project Setup (GIT)**
 1. Open Eclipse and go to `File > Import...`.
 2. Select `Git > Projects from Git` and click `Next`.
 3. Choose `Clone URI` and click `Next`.
 4. Enter the repository URI:  
    `https://github.com/MitsukiS16/PUIO_PIS.git`  
    then click `Next` and `Finish`.
+   
+**Project Setup (ZIP)**
+1. Download and Extract the ZIP file
+2. Open Eclipse and go to `File > Import...`.
+3. Select `General > Existing Projects into Workspace` and click `Next`.
+4. Click `Browse` and locate the folder where you extracted the ZIP.
+5. Ensure the project apppears in the `Projects`, then click `Finish`
+
 
 **Configuring JavaFX**
 - Add the JavaFX `lib` folder to your project’s build path  
