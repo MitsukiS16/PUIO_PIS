@@ -44,12 +44,6 @@ The interactive version will be implemented using JavaFX.
   - [ ] Detect Game Over
   - [ ] Detect Winning condition
 
-- [✓] **Game Mechanics**
-  - [✓] Randomly place mines
-  - [ ] Generate logical clues dynamically instead of numbers
-  - [ ] Detect Game Over
-  - [ ] Detect Winning condition
-
 - [ ] **Custom Settings**
   - [ ] Adjustable grid size (9x9, 16x16, 16x32)
   - [ ] Adjustable mine density (Easy, Medium, Hard)
@@ -69,6 +63,7 @@ The interactive version will be implemented using JavaFX.
 - JavaFX SDK
 - Eclipse IDE
 - (Optional) Scene Builder
+
 
 **Project Setup (GIT)**
 1. Open Eclipse and go to `File > Import...`.
