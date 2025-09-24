@@ -114,7 +114,7 @@ The interactive version will be implemented using JavaFX.
   - `.fxml` files – Define UI layout 
 
 ## Screenshots
-![Screenshot](screenshot1.png)
+![Screenshot](/img/image1.png)
 
 ## Future Work
 - Limited clue variety in early versions
